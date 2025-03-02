@@ -1,0 +1,503 @@
+/* ------------ FONT IMPORTSS ------------ */
+@import url('https://fonts.googleapis.com/css?family=Alfa+Slab+One');
+
+/* ------------ CSS VARIABLES ------------ */
+:root{
+	--brand-color: #A9D8AB;
+	--brand-d-color: #66AD67;
+	--skyblock-color: #aeeaab;
+	--citybuild-color: #ddb889;
+	--factions-color: #a8a8a8;
+}
+
+/* ------------ GENERAL ON PAGE ------------ */
+body{
+	margin: 0;
+	padding: 0;
+	font-family: Arial, sans-serif;
+	color: #444;
+	overflow-x: hidden;
+}
+a{
+	text-decoration: none;
+	color: #444;
+	transition: color .1s linear;
+}
+.container{
+	width: 80%;
+	margin: 0 auto;
+}
+.caption{
+	margin: 0;
+	font-style: italic;
+	font-size: 1.1rem;
+	color: #888;
+}
+
+/* ------------ COLOR THEMES ------------ */
+.brand-color{
+	color: var(--brand-color);
+}
+.sb-color{
+	color: var(--skyblock-color);
+}
+.fc-color{
+	color: var(--factions-color);
+}
+.cb-color{
+	color: var(--citybuild-color);
+}
+
+/* ------------ BTN + BTN TYPES (ALL AS LINKS) ------------ */
+.btn{
+	width: 300px;
+	padding: 0.5em;
+	border-radius: 8px;
+	text-transform: uppercase;
+	font-weight: bold;
+	display: inline-block;
+	text-align: center;
+	margin: 3vh 0;
+	transition: transform .15s linear;
+}
+.btn:hover{
+	transform: scale(1.05);
+}
+
+.btn-group{
+	text-align: center;
+	margin: 2vh 0;
+}
+.btn-group *{
+	margin: 0 1.5vw;
+}
+
+/* TYPES */
+.btn-brand{
+	font-size: 2rem;
+	background: var(--brand-color);
+	color: #fff;
+	transition: background .25s linear, transform .15s linear;
+}
+.btn-brand:hover{
+	background: var(--brand-d-color);
+}
+
+.btn-readmore{
+	background: #CE9758;
+	color: #fff;
+	width: 250px;
+	transition: background .25s linear;
+}
+.btn-readmore:hover{
+	background: #CC7E26;
+	transform: scale(1);
+}
+
+.btn-teamspeak{
+	background: #2A547E;
+	color: #fff;
+	font-size: 1.5rem;
+}
+
+.btn-ticket{
+	background: #c6c6c6;
+	color: #fff;
+	font-size: 1.5rem;
+}
+
+.btn-forum{
+	background: #DB905E;
+	color: #fff;
+	font-size: 1.5rem;
+}
+
+
+
+
+
+
+
+
+/* ------------ HEADER ------------ */
+header{
+	width: 100vw;
+	height: 77vh;
+	background: linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,0.1)), url("../media/main-bg.jpg") no-repeat center/cover;
+}
+header nav{
+	display: grid;
+	grid-template-columns: 30% 70%;
+	background: rgba(255,255,255,0.9);
+	height: 100px;
+	align-content: center;
+	justify-content: center;
+}
+header nav .nav-img img{
+	width: 17vw;
+	padding: 5px;
+	display: block;
+	margin: 0 auto;
+}
+header nav ul{
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	margin-left: 5vw;
+	margin-top: 2.5vh;
+	text-transform: uppercase;
+}
+header nav ul li{
+	display: inline;
+	padding: 0 1.5vw;
+	font-size: 2rem;
+	font-weight: bold;
+}
+header nav ul li a:hover{
+	color: var(--brand-d-color);
+}
+
+
+
+/* ------------ HEADER SHOWCASE ------------ */
+header .header-txt{
+	margin-top: 33vh;
+	color: #fff;
+	text-shadow: 2px 2px #444;
+	animation-name: head-txt-animation;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease-in-out;
+}
+header .header-txt h1{
+	margin: 0;
+	font-size: 4rem;
+	font-weight: lighter;
+	font-family: "Alfa Slab One", Arial, sans-serif;
+}
+header .header-txt p{
+	margin: 0;
+	font-size: 2rem;
+}
+header .header-btn{
+	animation-name: head-btn-animation;
+	animation-delay: 1s;
+	animation-duration: .3s;
+	animation-timing-function: linear;
+	animation-fill-mode: forwards;
+	opacity: 0;
+}
+
+
+
+
+
+
+
+
+/* ------------ ARTICLE CARDS ------------ */
+main .i-c-n-grid{
+	display: grid;
+	grid-auto-columns: 25%;
+	grid-auto-rows: 20vh;
+	grid-auto-flow: column;
+	grid-column-gap: 2%;
+	justify-content: center;
+	padding: 0.9vh 0;
+	border-top: 5px solid #444;
+	border-bottom: 5px solid #444;
+}
+main .news-card{
+	border: 1px solid #000;
+	display: inline-block;
+	transition: transform .15s linear;
+	padding: 5%;
+	text-align: center;
+}
+main .news-card *{
+	margin: 0;
+}
+main .new-card{
+	animation-name: news-card-new-amt;
+	animation-duration: .5s;
+	background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)), url("../media/Background00.png") no-repeat center/cover;
+}
+main .new-card:hover{
+	transform: scale(1.1);
+}
+main .old-card{
+	transform: scale(0.9);
+	opacity: 0.85;
+	animation-name: news-card-old-amt;
+	animation-duration: .5s;
+	animation-delay: .5s;
+	animation-fill-mode: backwards;
+	background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)), url("../media/Background01.png") no-repeat center/cover;
+}
+main .old-card:hover{
+	transform: scale(1);
+}
+main .older-card{
+	transform: scale(0.8);
+	opacity: 0.7;
+	animation-name: news-card-older-amt;
+	animation-delay: 1s;
+	animation-duration: .5s;
+	animation-fill-mode: backwards;
+	background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)), url("../media/Background02.png") no-repeat center/cover;
+}
+main .older-card:hover{
+	transform: scale(0.9);
+}
+main .news-card .date-p{
+	font-style: italic;
+	font-size: 1.1rem;
+	text-align: left;
+}
+main .news-card h3{
+	text-align: center;
+	font-size: 1.5rem;
+	font-weight: bolder;
+	line-height: 2em;
+}
+main .stats-grid{
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	text-align: center;
+}
+main .stats-grid p{
+	font-size: 1.25rem;
+	margin-bottom: 1.5vh;
+}
+main .stats-grid i{
+	padding: 0 5%;
+}
+
+
+
+
+
+
+
+
+
+/* ------------ GAME PREVIEW ------------ */
+#game-preview{
+	position: relative;
+	z-index: 2; /* for the animations .new etc */
+	background: #fff;
+	padding-top: 2vh;
+}
+#game-preview h2{
+	margin: 0;
+	text-align: center;
+	font-size: 3rem;
+	text-transform: uppercase;
+}
+main .gp-card{
+	display: grid;
+	grid-template-columns: repeat(2, 50%);
+	margin: 10vh auto;
+}
+main .gp-card-img{
+	text-align: center;
+}
+main .gp-card-img img{
+	width: 80%;
+	border-radius: 30px;
+}
+
+main .gp-card-txt{
+	width: 75%;
+	margin: 0 auto;
+}
+main .gp-card-txt h3{
+	text-transform: uppercase;
+	margin: 0;
+	text-align: center;
+	font-size: 2.5rem;
+	text-shadow: 2px 2px 1px #444;
+}
+main .gp-card-txt hr{
+	width: 80%;
+	padding: 2px 0;
+	background-color: #ddd;
+	border-radius: 10px;
+	border: none;
+}
+main .gp-card-txt .desc{
+	text-align: justify;
+	margin: 0;
+	line-height: 1.5em;
+	font-size: 1.25rem;
+}
+main .gp-card-txt .gp-player-count{
+	border: 1px solid #444;
+	width: 300px;
+	margin: 2vh auto;
+	text-align: center;
+	box-shadow: 3px 3px 2px #777;
+	border-radius: 5px;
+	padding: 2.5px;
+	line-height: 1.5em;
+	font-size: 1.25rem;
+	transition: transform .15s linear;
+}
+main .gp-card-txt .gp-player-count:hover{
+	transform: scale(1.1);
+}
+
+
+
+
+
+/* ------------ HELP SECTION ------------ */
+#support-sec{
+	background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("../media/Background06.jpg") no-repeat center/cover;
+	height: 40vh;
+	color: #fff;
+	border-bottom: 3px solid #444;
+	border-top: 3px solid #444;
+	padding-top: 8vh;
+	text-shadow: 2px 2px 1px #444;
+}
+#support-sec h3{
+	margin: 0;
+	font-size: 3rem;
+	text-align: center;
+}
+#support-sec p{
+	font-size: 1.5rem;
+	text-align: justify;
+	width: 75%;
+	margin: 0 auto;
+	line-height: 1.5em;
+}
+#support-sec .btn-group *{
+	width: 400px;
+}
+
+
+
+
+
+
+
+
+
+/* ------------ FOOTER ------------ */
+footer {
+	border-top: 3px solid #444;
+}
+#footer-topics{
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	padding: 40px;
+}
+
+#footer-topics ul{
+	list-style-type: none;
+	padding: 0;
+	width: 80%;
+	margin: 0 auto;
+	line-height: 1.65em;
+}
+
+#footer-topics p{
+	margin: 0;
+	text-align: center;
+	font-weight: bold;
+	font-size: 1.2rem;
+	margin-top: 0.5vh;
+}
+
+#footer-topics hr{
+	margin: 2px auto;
+	border: none;
+	background-color: #ddd;
+	width: 60%;
+	height: 5px;
+}
+
+#footer-topics ul li:before{
+	content: "▶ ";
+	color: #444;
+	font-style: normal;
+}
+
+#footer-topics li{
+	font-size: 1.1rem;
+	font-style: italic;
+	color: #444;
+	width: 55%;
+	margin: 0 auto;
+}
+
+
+
+#terms{
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	text-align: center;
+	margin: 3vh 0 2vh 0;
+	font-size: 1.1rem;
+}
+
+#terms p{
+	margin: 0;
+	font-weight: bold;
+}
+
+#terms ul{
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+#terms li{
+	display: inline;
+	padding: 0 10px;
+}
+
+
+
+
+
+
+
+/* ------------ ANIMATION KEYFRAMES ------------ */
+@keyframes head-txt-animation{ /* .head-txt */
+	from {
+		transform: translateX(-1000px);
+	} to {
+		transform: translateX(0);
+	}
+}
+@keyframes head-btn-animation{ /* .head-btn */
+	from {
+		opacity: 0;
+	} to {
+		opacity: 1;
+	}
+}
+@keyframes news-card-new-amt{ /* .new */
+	from{
+		transform: translateY(500px);
+	} to {
+		transform: translateY(0);
+	}
+}
+@keyframes news-card-old-amt{ /* .old */
+	from {
+		transform: translateY(500px) scale(0.9);
+	} to {
+		transform: translateY(0) scale(0.9);
+	}
+}
+@keyframes news-card-older-amt{ /* .older */
+	from{
+		transform: translateY(500px) scale(0.8);
+	} to {
+		transform:  translateY(0) scale(0.8);
+	}
+}
