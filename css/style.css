@@ -123,7 +123,7 @@ a{
 header{
 	width: 100vw;
 	height: 77vh;
-	background: linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,0.1)), url("../media/main-bg.jpg") no-repeat center/cover;
+	background: linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,0.1)), url("../media/Main-bg.jpg") no-repeat center/cover;
 }
 header nav{
 	display: grid;
